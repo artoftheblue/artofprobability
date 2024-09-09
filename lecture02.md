@@ -83,5 +83,5 @@ $A_i$ — $i$-й узел вышел из строя
 
 $$\forall i \Bigm| 0<\varepsilon\leq P(A_i)\ll 1$$
 
-$$P(\text{хотя бы один узел выйдет из строя})=P(A_1\cup\ldots\cup A_n)$$
+$$P(\text{хотя бы один узел выйдет из строя})=P(A_1\cup\ldots\cup A_n)=\\1-P(\overline A_1\cap\ldots\cap \overline A_n)=1-\prod^n_{i=1}P(\overline A_i)=1-\prod^n_{i=1}\underbrace{(1-P(A_i))}_{\leq 1-\varepsilon}\geq 1-(1-\varepsilon)^n\xrightarrow{n\to\infty} 1$$
 ```
