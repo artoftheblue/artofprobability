@@ -63,5 +63,9 @@ $A_1,A_2,A_3$ — независимы в совокупности, то $\overl
 
 $$P(\overline A_1\cap A_2)\overset{?}{=}P(\overline A_1)P(A_2)$$
 
-$$P(\overline A_1\cap A_2)=P(A_2\setminus A_1)=P(A_2)$$
+$$P(\overline A_1\cap A_2)=P(A_2\setminus A_1)=P(A_2)-P(A_2\cap A_1)=P(A_2)P(A_1)$$
+
+$$P(A_2)-P(A_2\cap A_1)=P(A_2)(1-P(A_1))=P(A_2)P(\overline A_1)\implies \\P(A_2)P(\overline A_1)=P(A_2)P(A_1)$$
+
+$$P(\overline A_1\cap A_2\cap A_3)=P((A_2\cap A_3)\setminus A_1)=P(A_2)P(A_3)-P(A_1\cap A_2\cap A_3)\\=P(A_1)P(A_2)P(A_3)=P(\overline A_1)P(A_2)P(A_3)$$
 ```
