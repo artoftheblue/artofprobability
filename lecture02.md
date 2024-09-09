@@ -1,3 +1,8 @@
+---
+abbreviations:
+  ЗБЧ: Закон Больших Чисел 
+---
+
 # Лекция 2, 09.09.2024
 
 $$P(A)=\sum_{w_i\in A}P(w_i)$$
@@ -54,7 +59,7 @@ $$P(A)=P(B)=P(C)=\frac{1}{2}$$
 $$\frac{1}{8}=P(A)P(B)P(C)\neq P(A\cap B\cap C)$$
 ```
 
-```{seealso} Замечание
+```{note} Замечание
 Если $A_1,\ldots,A_n$ независимы в совокупности, то над любым из событий можно поставить отрицание и система останется неизменной.
 ```
 
@@ -68,4 +73,15 @@ $$P(\overline A_1\cap A_2)=P(A_2\setminus A_1)=P(A_2)-P(A_2\cap A_1)=P(A_2)P(A_1
 $$P(A_2)-P(A_2\cap A_1)=P(A_2)(1-P(A_1))=P(A_2)P(\overline A_1)\implies \\P(A_2)P(\overline A_1)=P(A_2)P(A_1)$$
 
 $$P(\overline A_1\cap A_2\cap A_3)=P((A_2\cap A_3)\setminus A_1)=P(A_2)P(A_3)-P(A_1\cap A_2\cap A_3)\\=P(A_1)P(A_2)P(A_3)=P(\overline A_1)P(A_2)P(A_3)$$
+```
+
+```{prf:example} Простейший вариант ЗБЧ / Неизбежность технологических катастроф 
+
+$A_1,\dots,A_n$ — независимы в совокупности
+
+$A_i$ — $i$-й узел вышел из строя
+
+$$\forall i \Bigm| 0<\varepsilon\leq P(A_i)\ll 1$$
+
+$$P(\text{хотя бы один узел выйдет из строя})=P(A_1\cup\ldots\cup A_n)$$
 ```
