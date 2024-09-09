@@ -102,3 +102,17 @@ $$\boxed{P(A)=\sum^n_{i=1}P(A|H_i)P(H_i)}$$
 ```{prf:proof}
 $$P(A)=P\left(\bigcup^n_{i=1}(A\cap H_i)\right)=\sum^n_{i=1}P(A\cap H_i)=\sum^n_{i=1}P(A|H_i)P(H_i)$$
 ```
+
+## Формула Байеса
+
+$$P(H_k|A)=\frac{P(A|H_k)P(H_k)}{P(A)}=\frac{P(A|H_k)P(H_k)}{\sum^n_{i=1}P(A|H_i)P(H_i)}$$
+
+```{prf:example}
+
+> У меня СПИД, конкретно.  
+
+* $P(\text{AIDS})=0.03$
+* $P(+|\text{AIDS})=0.98$ — чувствительность теста
+* $P(+|\overline{\text{AIDS}})=0.01=(1-\text{специфичность теста})$ 
+* $P(\text{AIDS}|+)=\displaystyle\frac{P(+|\text{AIDS})P(\text{AIDS})}{P(+|\text{AIDS})P(\text{AIDS})+P(+|\overline{\text{AIDS}})P(\overline{\text{AIDS}})}=\frac{0.98\cdot0.03}{0.98\cdot0.03+0.01\cdot0.97}=0.75$
+```
