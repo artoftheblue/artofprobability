@@ -78,13 +78,14 @@ $$P(\overline A_1\cap A_2\cap A_3)=P((A_2\cap A_3)\setminus A_1)=P(A_2)P(A_3)-P(
 
 ```{prf:example} Простейший вариант ЗБЧ / Неизбежность технологических катастроф 
 
-$A_1,\dots,A_n$ — независимы в совокупности
-
-$A_i$ — $i$-й узел вышел из строя
+* Есть $n$ узлов, события $A_1,\dots,A_n$ — независимы в совокупности
+* $A_i$ — $i$-й узел вышел из строя
 
 $$\forall i \Bigm| 0<\varepsilon\leq P(A_i)\ll 1$$
 
 $$P(\text{хотя бы один узел выйдет из строя})=P(A_1\cup\ldots\cup A_n)=\\1-P(\overline A_1\cap\ldots\cap \overline A_n)=1-\prod^n_{i=1}P(\overline A_i)=1-\prod^n_{i=1}\underbrace{(1-P(A_i))}_{\leq 1-\varepsilon}\geq 1-(1-\varepsilon)^n\xrightarrow{n\to\infty} 1$$
+
+Это означает, что при количестве узлов, стремящихся в бесконечность, технологические катастрофы неизбежны (их вероятность равна $1$).
 ```
 
 ## Формула полной вероятности (ФПВ) 
@@ -103,16 +104,20 @@ $$\boxed{P(A)=\sum^n_{i=1}P(A|H_i)P(H_i)}$$
 $$P(A)=P\left(\bigcup^n_{i=1}(A\cap H_i)\right)=\sum^n_{i=1}P(A\cap H_i)=\sum^n_{i=1}P(A|H_i)P(H_i)$$
 ```
 
-## Формула Байеса
+## Формула Байеса. Апостериорные вероятности
 
 $$P(H_k|A)=\frac{P(A|H_k)P(H_k)}{P(A)}=\frac{P(A|H_k)P(H_k)}{\sum^n_{i=1}P(A|H_i)P(H_i)}$$
 
 ```{prf:example}
 
-> У меня СПИД, конкретно.  
+> У меня СПИД, конкретно.
 
-* $P(\text{AIDS})=0.03$
-* $P(+|\text{AIDS})=0.98$ — чувствительность теста
-* $P(+|\overline{\text{AIDS}})=0.01=(1-\text{специфичность теста})$ 
+Классическая задачка на false negatives и false positives. Мы хотим посчитать true positive в итоге:
+
+* $P(\text{AIDS})=0.03$ — у человека есть СПИД
+* $P(+|\text{AIDS})=0.98$ — чувствительность теста, aka шанс того, что тест поймает СПИД у носителя
+* $P(+|\overline{\text{AIDS}})=0.01=(1-\text{специфичность теста})$ — шанс того, что тест даст false positive
 * $P(\text{AIDS}|+)=\displaystyle\frac{P(+|\text{AIDS})P(\text{AIDS})}{P(+|\text{AIDS})P(\text{AIDS})+P(+|\overline{\text{AIDS}})P(\overline{\text{AIDS}})}=\frac{0.98\cdot0.03}{0.98\cdot0.03+0.01\cdot0.97}=0.75$
+
+Из этого следует, что $25\%$ положительных кейсов будут false positives. 
 ```
