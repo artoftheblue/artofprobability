@@ -1,6 +1,7 @@
 ---
 abbreviations:
   ЗБЧ: Закон Больших Чисел 
+  ФПВ: Формула Полной Вероятности
 ---
 
 # Лекция 2, 09.09.2024
@@ -84,4 +85,20 @@ $A_i$ — $i$-й узел вышел из строя
 $$\forall i \Bigm| 0<\varepsilon\leq P(A_i)\ll 1$$
 
 $$P(\text{хотя бы один узел выйдет из строя})=P(A_1\cup\ldots\cup A_n)=\\1-P(\overline A_1\cap\ldots\cap \overline A_n)=1-\prod^n_{i=1}P(\overline A_i)=1-\prod^n_{i=1}\underbrace{(1-P(A_i))}_{\leq 1-\varepsilon}\geq 1-(1-\varepsilon)^n\xrightarrow{n\to\infty} 1$$
+```
+
+## Формула полной вероятности (ФПВ) 
+
+```{prf:theorem}
+$\{H_i\}$ — полная группа  несовместных событий (разбиение $\Omega$)
+
+**Несовместность**: $H_i\cap H_j=\varnothing,\forall i\neq j$
+
+**Полнота**: $\displaystyle\bigcup^n_{i=1} H_i=\Omega$
+
+$$\boxed{P(A)=\sum^n_{i=1}P(A|H_i)P(H_i)}$$
+```
+
+```{prf:proof}
+$$P(A)=P\left(\bigcup^n_{i=1}(A\cap H_i)\right)=\sum^n_{i=1}P(A\cap H_i)=\sum^n_{i=1}P(A|H_i)P(H_i)$$
 ```
