@@ -75,5 +75,5 @@ $$\forall B\colon P(B)>0\qquad P(A|B)=\frac{P(A\cap B)}{P(B)}$$
 
 ```{prf:theorem} Теорема умножения
 $$P(A\cap B)=P(A|B)P(B)$$
-$$P(A_1\cap\dots\cap A_n)=P(A_1)P(A_2|A_1)P(A_3|A_1\cap A_2)\cdot\ldots\cdot P(A_n|A_1\cdot\ldots\cdot A_{n-1})$$
+$$P(A_1\cap\dots\cap A_n)=P(A_1)P(A_2|A_1)P(A_3|A_1\cdot A_2)\cdot\ldots\cdot P(A_n|A_1\cdot\ldots\cdot A_{n-1})$$
 ```
