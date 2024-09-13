@@ -161,3 +161,47 @@ $$\bigcup^\infty_{n=1}A_n=(0,1)\not\in A$$
 
 $\implies\mathcal{A}$ — не $\sigma$-алгебра
 
+## Задача 7
+
+$$\Omega=\{a,b,c,d\}$$
+
+$$\mathcal{F}_1=\{\varnothing,\Omega,\{a\},\{b, c, d\}\},\mathcal{F}_2=\{\varnothing,\Omega,\{a,b,c\},\{d\}\}$$
+
+1. $\mathcal{F}, \mathcal{F}$ — $\sigma$-алгебры
+2. $\mathcal{F}\cap\mathcal{F}=\{A\colon A\in\mathcal{F}_1 \land A\in\mathcal{F}_2\}=\{\varnothing,\Omega\}$ — $\sigma$-алгебра
+3. $\mathcal{F}_1\cup\mathcal{F}_2=\{A\colon A\in\mathcal{F}_1\lor A\in\mathcal{F}_2\}=\{\varnothing,\Omega,\{a\},\{b, c, d\},\{a,b,c\},\{d\}\}$
+
+$$\{a\},\{d\}\in\mathcal{F}_1\cup\mathcal{F}_2$$
+
+$$\{a\}\cup\{d\}=\{a, d\}\not\in\mathcal{F}_1\cup\mathcal{F}_2$$
+
+$\implies$ это не $\sigma$-алгебра
+
+## Задача 9
+
+Доказать, что пересечение любого семейста $\sigma$-алгебр с одной и той же единицей является $\sigma$-алгеброй
+
+$\mathcal{F}_j,j\in J$ ($J$ — произвольное множество индексов) $\forall j\in J,\ \Omega\in\mathcal{F}_j$
+
+$\hat{\mathcal{F}}:=\bigcap_{j\in J}\mathcal{F}_j$ — $\sigma$-алгебра
+
+1. $\Omega\in\hat{\mathcal{F}}$. В самом деле, $\forall j\in J,\Omega\in\mathcal{F}_j\implies\Omega\in\bigcap_{j\in J}\mathcal{F}_j=\hat{\mathcal{F}}$
+
+2. $A\in\hat{\mathcal{F}}\implies\forall j\in J, A\in\mathcal{F}_j\implies\forall j\in J, A^c\in\mathcal{F}_j\implies A^c\in\bigcup_{j\in J}\mathcal{F}_j=\hat F$
+
+3. $A_1,\dots,A_n,\dots\in\hat{\mathcal{F}}\implies\forall b\in\mathbb{N}\forall j\in J A_n\in\mathcal{F}_j\implies\forall j\in J (\forall n\in\mathbb{N}, A_n\in\mathcal{F}_j)\implies\forall j\in J \bigcup^\infty_{n=1}A_n\in\mathcal{F}_j\implies\bigcup_{j\in J}A_j\in\bigcap_{j\in J}\mathcal{F}_j=\hat{\mathcal{F}}_j$
+
+```{prf:definition}
+Пусть $\Omega\neq\varnothing$ и $\mathcal{S}$ — это непустая система подмножеств множества $\Omega$.
+
+Минимальной $\sigma$-алгеброй, содержащей систему $\mathcal{S}$ называется такая $\sigma$-алгебра $\sigma(\mathcal{S})$, что
+
+1. $\mathcal{S}\in\sigma(\mathcal{S})$
+2. для любой $\sigma$-алгебры $\mathcal{G}$, которая содержит систему $\mathcal{S} (\mathcal{S}\subseteq\mathcal{G})$, справедливо, что $\sigma(\mathcal{S})\subseteq\mathcal{G}$
+```
+
+```{prf:definition}
+Минимальная $\sigma$-алгебра, содержащая все полуинтервалы вида $(a, b)$ на числовой прямой, где $-\infty<a, b<+\infty$, называется барелевской $\sigma$-алгеброй на числовой прямой $\mathbb{R}$ и обозначается $\mathcal{B}(\mathbb{R})$.
+
+Элементы барелевской $\sigma$-алгебры называются барелевскими множествами.
+```
