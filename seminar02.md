@@ -96,3 +96,68 @@ $$\bigcap^\infty_{n=1}A_n=\left(\underbrace{\bigcup_{n=1}^\infty \underbrace{A_n
 
 ## Задача 5
 
+$\Omega=\{a, b, c, d\}$. Какие из множеств являются $\sigma$-алгебрами?
+
+1. $\mathcal{S}_1=\{\varnothing,\Omega\}$ — сигма алгебра (тривиальная, "самая бедная")
+
+$$\bigcup^\infty_{n=1}A_n\in\mathcal{S}_1$$
+
+2. $\mathcal{S}_2=2^{\Omega}$ — множество всех подмножеств в множестве $\Omega$.
+
+$$A\in 2^\Omega\iff A\subseteq\Omega\implies\Omega\setminus A\subseteq\Omega\iff\underbrace{\Omega\setminus A}_{=A}\in 2^\Omega$$
+
+$$\bigcup_{n=1}^\infty A_n\subseteq\Omega\implies\bigcup^\infty_{n=1}A_n\in 2^\Omega$$
+
+3. $\mathcal{S}_3=\{\{a, b\},\{c, d\}\}$
+
+$\Omega\in\mathcal{S}_3\implies\mathcal{S}_3$ — не $\sigma$-алгебра
+
+4. $\mathcal{S}_4=\{\varnothing,\Omega,\{a, b\}\}$
+
+$\{a, b\}\in\mathcal{S}_4$, но $\{a, b\}^c\not\in\mathcal{S}_4$
+
+## Задача 6
+
+$$\Omega=(0, 1]$$
+
+$$\mathcal{A}=\{A=\bigcup^n_{k=1}(a_k;b_k]\colon n\in\mathbb{N}, (a_k;b_k] \subseteq\Omega, (a_k;b_k]\cap(a_l;b_l]=\varnothing, l\neq k\}$$
+
+### Подзадача А
+
+Докажите, что $\mathcal{A}$ — алгебра
+
+---
+
+$A\cup B=A\sqcup B$ для $A\cap B=\varnothing$
+
+$$\bigcup_{n=1}^\infty A_n=\bigsqcup_{n=1}^\infty A_n$$
+
+$$A=(0.1,0.25]\cup(0.33,0.47]\cup(0.9, 1]\in\mathcal{A}$$
+
+---
+
+$$A=[0.1,0.5]={0.1}\cup(0.1, 0.5]\not\in\mathcal{A}$$
+
+$$(0.1,0.1]=\{x\colon 0.1<x\leq 0.1\}=\varnothing$$
+
+$$(a;b]=\{x\colon a<x\leq b\}$$
+
+$$\Omega=(0, 1]\in\mathcal{A}$$
+
+---
+
+$$A^c=(0, 0.1]\sqcup(0.25,0.33]\sqcup(0.47,0.9]\in\mathcal{A}$$
+
+Очевидно, что объединение таких множеств сохраняет их структуру и что перед нами алгебра.
+
+### Подзадача B
+
+Приведите пример: $A_1,\dots,A_n,\dots\in\mathcal{A}$, но $\bigcup^\infty_{n=1}A_n\not\in\mathcal{A}$
+
+
+$$A_1=\varnothing\in\mathcal{A}, A_n=\underbrace{(0,1-\frac{1}{n}]}_{\in A},n\leq 2$$
+
+$$\bigcup^\infty_{n=1}A_n=(0,1)\not\in A$$
+
+$\implies\mathcal{A}$ — не $\sigma$-алгебра
+
