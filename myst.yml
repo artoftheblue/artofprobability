@@ -8,6 +8,14 @@ project:
   # authors: []
   github: https://github.com/artoftheblue/artofprobabiltiy
   # To autogenerate a Table of Contents, run "myst init --write-toc"
+  math:
+    '\RR': '\mathbb{R}'
+    '\PP': '\mathbb{P}' 
+    '\mes': '\text{mes}'
+    '\emptyset': '\varnothing'
+    '\RHS': '\text{RHS}'
+    '\LHS': '\text{LHS}'
+    '\FF': '\mathcal{F}'
 site:
   template: book-theme
   # options:
