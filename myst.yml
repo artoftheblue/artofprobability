@@ -11,6 +11,7 @@ project:
   math:
     '\RR': '\mathbb{R}'
     '\PP': '\mathbb{P}' 
+    '\ZZ': '\mathbb{Z}' 
     '\mes': '\text{mes}'
     '\emptyset': '\varnothing'
     '\RHS': '\text{RHS}'
