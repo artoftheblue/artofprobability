@@ -153,6 +153,18 @@ $$\begin{align*}&A_1:=\{\text{победил первый игрок}\}=\{O,PPPO
 
 $$\PP(A_1)=\frac{1}{2}+\frac{1}{2^4}+\frac{1}{2^7}+\frac{1}{2^{10}}+\dots=\frac{\frac{1}{2}}{1-\frac{1}{2^3}}=\frac{\frac{1}{2}}{\frac{7}{8}}=\frac{4}{7}$$
 
-$$\PP(A_2)=\frac{1}{2^2}+\frac{1}{2^5}+\frac{1}{2^8}$$
+$$\PP(A_2)=\frac{1}{2^2}+\frac{1}{2^5}+\frac{1}{2^8}+\dots=\frac{1}{2}\PP(A_1)=\frac{2}{7}$$
 
-$$\PP(A_2)=\frac{1}{2^2}+\frac{1}{2^5}+\frac{1}{2^8}$$
+$$\PP(A_3)=\frac{1}{2^3}+\frac{1}{2^6}+\frac{1}{2^9}+\dots=\frac{1}{2}\PP(A_2)=\frac{1}{7}$$
+
+### Способ 2. 
+
+$$D_1:=\{\text{при первом подбрасывании выпал орёл}\}$$
+
+$$p_i:=\PP(A_i),\quad i=1,2,3$$
+
+$$\begin{align*}p_1&=\PP(A_1|D_1)\PP(D_1)+\PP(A_1|D_1^c)\PP(D_1^c)\\&=1\times\frac{1}{2}+p_3\times\frac{1}{2}\end{align*}$$
+
+$$\begin{align*}p_2&=\PP(A_2|D_1)\PP(D_1)+\PP(A_2|D_1^c)\PP(D_1^c)\\&=0\times\frac{1}{2}+p_1\times\frac{1}{2}\end{align*}$$
+
+$$\begin{align*}P(A_1|D_1^c)&=\frac{\PP(A_1\cap D_1^c)}{\PP(D_1^c)}=\frac{\PP(\{PPPO,PPPPPPO,\dots\})}{\frac{1}{2}}\\&=\frac{\frac{1}{2^4}+\frac{1}{2^7}+\frac{1}{2^{10}}+\dots}{\frac{1}{2}}=\frac{1}{2^3}+\frac{1}{2^6}+\frac{1}{2^9}+\dots=p_3\end{align*}$$
