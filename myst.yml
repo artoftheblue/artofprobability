@@ -12,11 +12,14 @@ project:
     '\RR': '\mathbb{R}'
     '\PP': '\mathbb{P}' 
     '\ZZ': '\mathbb{Z}' 
+    '\NN': '\mathbb{N}' 
+    '\QQ': '\mathbb{Q}' 
     '\mes': '\text{mes}'
     '\emptyset': '\varnothing'
     '\RHS': '\text{RHS}'
     '\LHS': '\text{LHS}'
     '\FF': '\mathcal{F}'
+    '\BB': '\mathcal{B}'
 site:
   template: book-theme
   # options:
