@@ -20,6 +20,7 @@ project:
     '\LHS': '\text{LHS}'
     '\FF': '\mathcal{F}'
     '\BB': '\mathcal{B}'
+    '\d': '\text{d}'
 site:
   template: book-theme
   # options:
