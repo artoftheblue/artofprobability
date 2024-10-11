@@ -13,6 +13,7 @@ project:
     '\PP': '\mathbb{P}' 
     '\ZZ': '\mathbb{Z}' 
     '\NN': '\mathbb{N}' 
+    '\EE': '\mathbb{E}' 
     '\QQ': '\mathbb{Q}' 
     '\mes': '\text{mes}'
     '\emptyset': '\varnothing'
