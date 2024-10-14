@@ -22,6 +22,7 @@ project:
     '\FF': '\mathcal{F}'
     '\BB': '\mathcal{B}'
     '\d': '\text{d}'
+    '\Var': '\text{Var}'
 site:
   template: book-theme
   # options:
