@@ -23,6 +23,8 @@ project:
     '\BB': '\mathcal{B}'
     '\d': '\text{d}'
     '\Var': '\text{Var}'
+    '\cov': '\text{cov}'
+    '\corr': '\text{corr}'
 site:
   template: book-theme
   # options:
