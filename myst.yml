@@ -25,6 +25,9 @@ project:
     '\Var': '\text{Var}'
     '\cov': '\text{cov}'
     '\corr': '\text{corr}'
+    '\sign': '\text{sign}'
+  numbering:
+    equation: false
 site:
   template: book-theme
   # options:
